@@ -1,7 +1,7 @@
 <div class="mt-4">
-    @if (isset($microposts))
+    @if (isset($favorites))
         <ul class="list-none">
-            @foreach ($microposts as $micropost)
+            @foreach ($favorites as $micropost)
                 <li class="flex items-start gap-x-2 mb-4">
                     {{-- 投稿の所有者のメールアドレスをもとにGravatarを取得して表示 --}}
                     <div class="avatar">
@@ -37,6 +37,6 @@
             @endforeach
         </ul>
         {{-- ページネーションのリンク --}}
-        {{ $microposts->links() }}
+        {{ $favorites->links() }}
     @endif
 </div>
